@@ -3,6 +3,8 @@ import Home from "./pages/home";
 import Rooms from "./pages/room";
 import Reservation from "./pages/reservation";
 import Login from "./pages/login";
+import Dashboard from "./pages/admin/dashboard";
+import Tabla_Habitaciones from "./pages/admin/tablaHabitaciones";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Elements } from "@stripe/react-stripe-js";
@@ -37,6 +39,7 @@ function App() {
           }
         />
         <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<Dashboard />} />
       </Routes>
     </Router>
   );
