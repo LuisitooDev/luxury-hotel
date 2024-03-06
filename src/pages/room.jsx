@@ -30,7 +30,7 @@ function Rooms() {
               <div className="card md:w-96 sm:w-full bg-base-100 shadow-xl mx-auto mt-8">
                 <figure>
                   <img
-                    src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                    src={`${habitacion.imagen}`}
                     alt="Shoes"
                   />
                 </figure>
