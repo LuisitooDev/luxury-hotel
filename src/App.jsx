@@ -3,6 +3,7 @@ import Home from "./pages/home";
 import Rooms from "./pages/room";
 import Reservation from "./pages/reservation";
 import Login from "./pages/login";
+import Contacts from "./pages/contacts";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Elements } from "@stripe/react-stripe-js";
@@ -23,6 +24,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/contacts" element={<Contacts />} />
         <Route path="/rooms" element={<Rooms />} />
         <Route
           path="/reservation-details/:id"
