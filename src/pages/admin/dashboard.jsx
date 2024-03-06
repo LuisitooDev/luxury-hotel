@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Tabla_Habitaciones from "./tablaHabitaciones";
 import Tabla_Reservaciones from "./tablaReservaciones";
+import Agregar_Reservacion from './agregarReservacion';
 
 function Dashboard() {
   const [tablaActual, setTablaActual] = useState('habitaciones'); // Estado para gestionar la tabla actual
@@ -20,11 +21,13 @@ function Dashboard() {
           {/* Mostrar la tabla según el estado actual */}
           {tablaActual === 'habitaciones' && <Tabla_Habitaciones />}
           {tablaActual === 'reservaciones' && <Tabla_Reservaciones />}
+          {tablaActual === 'agregar reservaciones' && <Agregar_Reservacion />}
 
         </div> 
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
           <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+          <img src="logo2.png" alt="Logo de la empresa" className="w-30" />
             {/* Sidebar content here */}
             <li>
               <a onClick={() => cambiarTabla('habitaciones')}>
@@ -34,6 +37,11 @@ function Dashboard() {
             <li>
               <a onClick={() => cambiarTabla('reservaciones')}>
                 Tabla Reservaciones
+              </a>
+            </li>
+            <li>
+              <a onClick={() => cambiarTabla('agregar reservaciones')}>
+                Agregar Reservacion
               </a>
             </li>
           </ul>
