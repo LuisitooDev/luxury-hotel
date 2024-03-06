@@ -11,7 +11,7 @@ function Contacts(){
                 <Hero backgroundUrl="home.png"/>
             </div>
             <h1 className="mb-5 text-3xl md:text-5xl font-bold text-white text-center">Contact Us</h1>
-            <div className="divider divider-success" />
+            <div className="divider divider-warning" />
             <h2 class="mb-3 text-xl md:text-3xl lg:text-5xl font-bold text-white">WE ARE HERE FOR YOU</h2>
             <h2 class="mb-2 text-lg md:text-xl lg:text-2xl font-bold text-white">
                 At Luxury Hotels we take our clients seriously. Do you have any questions, complaints, or requests?
@@ -45,22 +45,22 @@ function Contacts(){
                         Llene el formulario con su pregunta, queja o sugerencia.
                     </h2>
                     <form class="mb-4 md:mb-5 text-white" action="https://formsubmit.co/luxuryhotel@yopmail.com" method="POST">
-                        <label class="input input-bordered bg-neutral flex items-center gap-2 input-success input-md w-full mb-2 md:mb-4">
+                        <label class="input input-bordered bg-neutral flex items-center gap-2 input-warning input-md w-full mb-2 md:mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                             </svg>
                             <input type="text" class="w-full p-2 pl-3 pr-3" name="Nombre" placeholder="Ingrese su nombre" required />
                         </label>
-                        <label class="input input-bordered bg-neutral flex items-center gap-2 input-success input-md w-full mb-2 md:mb-4">
+                        <label class="input input-bordered bg-neutral flex items-center gap-2 input-warning input-md w-full mb-2 md:mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                             </svg>
                             <input type="email" class="w-full p-2 pl-3 pr-3" name="Correo" placeholder="Ingrese su correo electrónico" required />
                         </label>
                         <label>
-                            <textarea type="text" name="Mensaje" placeholder="Escriba su mensaje" class="textarea textarea-success bg-neutral textarea-md w-full" required></textarea>
+                            <textarea type="text" name="Mensaje" placeholder="Escriba su mensaje" class="textarea textarea-warning bg-neutral textarea-md w-full" required></textarea>
                         </label>
-                        <button type="submit" class="btn btn-success w-full mt-4">
+                        <button type="submit" class="btn btn-warning w-full mt-4">
                             Enviar mensaje
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
