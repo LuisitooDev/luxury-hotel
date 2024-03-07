@@ -50,16 +50,16 @@ function Contacts(){
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                             </svg>
-                            <input type="text" class="w-full p-2 pl-3 pr-3" name="Nombre" placeholder="Enter your name" required />
+                            <input type="text" class="w-full p-2 pl-3 pr-3" name="Name" placeholder="Enter your name" required />
                         </label>
                         <label class="input input-bordered flex items-center gap-2 input-primary input-md w-full mb-2 md:mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                             </svg>
-                            <input type="email" class="w-full p-2 pl-3 pr-3" name="Correo" placeholder="Enter your email" required />
+                            <input type="email" class="w-full p-2 pl-3 pr-3" name="Email" placeholder="Enter your email" required />
                         </label>
                         <label>
-                            <textarea type="text" name="Mensaje" placeholder="Write your message" class="textarea textarea-primary textarea-md w-full" required></textarea>
+                            <textarea type="text" name="Message" placeholder="Write your message" class="textarea textarea-primary textarea-md w-full" required></textarea>
                         </label>
                         <button type="submit" class="btn btn-primary w-full mt-4">
                             Send message
