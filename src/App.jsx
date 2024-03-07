@@ -3,6 +3,7 @@ import Home from "./pages/home";
 import Rooms from "./pages/room";
 import Reservation from "./pages/reservation";
 import Login from "./pages/login";
+import SignUp from "./pages/signup";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Elements } from "@stripe/react-stripe-js";
@@ -37,6 +38,7 @@ function App() {
           }
         />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </Router>
   );
