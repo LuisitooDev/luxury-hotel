@@ -100,7 +100,7 @@ function SignUp() {
 
           <div className="text-center">
             <button
-              className="bg-customGold text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
+              className="btn bg-customGold text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
               onClick={add}
             >
               SIGN UP

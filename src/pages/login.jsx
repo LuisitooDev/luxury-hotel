@@ -61,7 +61,7 @@ function Login() {
 
           <div className="text-center p-4">
             <a
-              className="bg-customGold text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
+              className="btn bg-customGold text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
               onClick={login}
             >
               LOGIN
