@@ -30,6 +30,7 @@ function Rooms() {
               <div className="card md:w-96 sm:w-full bg-base-100 shadow-xl mx-auto mt-8">
                 <figure>
                   <img
+                    className="object-cover w-full h-40"
                     src={`${habitacion.imagen}`}
                     alt="Shoes"
                   />

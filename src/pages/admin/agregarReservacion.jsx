@@ -34,7 +34,7 @@ function Agregar_Reservacion() {
 
   return (
     <>
-      <h3 className="font-bold text-lg mb-4">Add your reservation</h3>
+      <h3 className="font-bold text-lg mb-4"> your reservation</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <input
           type="text"
@@ -94,7 +94,7 @@ function Agregar_Reservacion() {
             )}
           />
         </div>
-        <button className="btn" onClick={add}>Agregar</button>
+        <button className="btn bg-customGold" onClick={add}>Agregar</button>
       </div>
     </>
   );

@@ -12,13 +12,12 @@ function Hero({ backgroundUrl }) {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold text-white">Hello there</h1>
+            <h5 className="mb-5 text-5xl font-bold text-white">WELCOME TO</h5>
+            <h1 className="mb-5 text-5xl font-bold text-white">LUXURY HOTEL</h1>
             <p className="mb-5 text-white">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+            Book your stay and enjoy Luxury redefined at the most affordable rates.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <a className="btn bg-customGold" href="/rooms">BOOK NOW</a>
           </div>
         </div>
       </div>
