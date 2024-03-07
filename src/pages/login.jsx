@@ -25,14 +25,14 @@ function Login() {
       
   return (
     <>
-        <div className="flex items-center justify-between p-4">
+ <div className="flex flex-col items-center justify-center bg-customBlue text-white">
     <img src={("logo.png")} alt="Logo" />
+    <div className="text-7xl p-4">LOGIN</div>
   </div>
-  <div className="container mx-auto">
-    <div className="flex justify-center items-center h-screen">
-      <div className="bg-white p-6 rounded-lg shadow-md">
-        <div className="text-2xl font-bold mb-4">LOGIN</div>
-        <form>
+  
+  <div className="container mx-auto mt-20 px-4 sm:px-6 lg:px-8">
+        
+        <form className="max-w-md mx-auto">
           <label htmlFor="email" className="text-sm font-medium text-gray-700 mb-1 block">
             Email:
           </label>
@@ -59,23 +59,21 @@ function Login() {
             onChange={(event) => setContrasena(event.target.value)}
           />
 
-          <div className="text-center">
+          <div className="text-center p-4">
             <a
-              className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
+              className="bg-customGold text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
               onClick={login}
             >
               LOGIN
             </a>
             <p className="mt-4">
-              <a href="/sign-up" className="text-blue-500">
+              <a href="/signup" className="text-blue-500">
                 I don't have an account
               </a>
             </p>
           </div>
         </form>
       </div>
-    </div>
-  </div>
     </>
   );
 }
