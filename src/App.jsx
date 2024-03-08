@@ -10,6 +10,7 @@ import SignUp from "./pages/signup";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import Facilities from "./pages/facilities";
 
 const stripePromise = loadStripe(
   "pk_test_51O2gfuJw0dovYyK3ViteKYgwaQz7Fh3fDPUDkqFrzI7zoIQ5c6EcT43rAjU37s4QvJaQJqGqE2uvllPbPS0SoWDI00NywlwgMx"
@@ -43,6 +44,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/admin" element={<Dashboard />} />
+        <Route path="/facilities" element={< Facilities />} />
+
       </Routes>
     </Router>
   );

@@ -21,7 +21,7 @@ function Navbar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm bg-customBlue dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
               <a className="text-lg text-white" href="/">Home</a>
@@ -33,7 +33,7 @@ function Navbar() {
               <a className="text-lg text-white" href="/rooms">Rooms</a>
             </li>
             <li>
-              <a className="text-lg text-white">Contact Us</a>
+              <a className="text-lg text-white" href="/contacts">Contact Us</a>
             </li>
           </ul>
         </div>

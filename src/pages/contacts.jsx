@@ -8,7 +8,7 @@ function Contacts(){
     return (
         <div class="bg-white-200">
             <div>
-                <Hero backgroundUrl="home.png"/>
+                <Hero backgroundUrl="contact.png"/>
             </div>
             <div class="bg-blue-950">
                 <h1 className="mb-7 text-7xl md:text-7xl text-white text-center">CONTACT US</h1>

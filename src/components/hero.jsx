@@ -3,7 +3,6 @@ import Navbar from "./Navbar";
 function Hero({ backgroundUrl }) {
   return (
     <>
-   
       <div
         className="hero min-h-screen"
         style={{ backgroundImage: `url(${backgroundUrl})` }}
