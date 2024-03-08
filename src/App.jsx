@@ -24,7 +24,6 @@ function App() {
   }, []);
 
   return (
-    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contacts" element={<Contacts />} />
@@ -47,7 +46,6 @@ function App() {
         <Route path="/facilities" element={< Facilities />} />
 
       </Routes>
-    </Router>
   );
 }
 
