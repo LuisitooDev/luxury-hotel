@@ -3,6 +3,7 @@ import Home from "./pages/home";
 import Rooms from "./pages/room";
 import Reservation from "./pages/reservation";
 import Login from "./pages/login";
+import Contacts from "./pages/contacts";
 import Dashboard from "./pages/admin/dashboard";
 import SignUp from "./pages/signup";
 
@@ -25,6 +26,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/contacts" element={<Contacts />} />
         <Route path="/rooms" element={<Rooms />} />
         <Route
           path="/reservation-details/:id"

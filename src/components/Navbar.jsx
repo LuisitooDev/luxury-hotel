@@ -51,7 +51,7 @@ function Navbar() {
             <a className="text-lg text-white font-bold" href="/rooms">Rooms</a>
           </li>
           <li>
-            <a className="text-lg text-white font-bold">Contact Us</a>
+            <a className="text-lg text-white font-bold" href="/contacts">Contact Us</a>
           </li>
         </ul>
       </div>
