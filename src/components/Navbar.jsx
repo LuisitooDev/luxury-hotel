@@ -27,7 +27,7 @@ function Navbar() {
               <a className="text-lg text-white" href="/">Home</a>
             </li>
             <li>
-              <a className="text-lg text-white">Facilities</a>
+              <a className="text-lg text-white" href="/facilities">Facilities</a>
             </li>
             <li>
               <a className="text-lg text-white" href="/rooms">Rooms</a>
@@ -45,7 +45,7 @@ function Navbar() {
             <a className="text-lg text-white font-bold" href="/">Home</a>
           </li>
           <li>
-            <a className="text-lg text-white font-bold">Facilities</a>
+            <a className="text-lg text-white font-bold" href="/facilities">Facilities</a>
           </li>
           <li>
             <a className="text-lg text-white font-bold" href="/rooms">Rooms</a>

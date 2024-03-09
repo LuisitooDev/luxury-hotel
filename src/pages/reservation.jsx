@@ -25,7 +25,7 @@ function Reservation() {
 
   const getHabitaciones = () => {
     axios
-      .get(`http://localhost:3001/getRoomById/${id}`)
+      .get(`https://backend-hotel-production-c6a5.up.railway.app/getRoomById/${id}`)
       .then((response) => {
         setHabitacion(response.data);
       })
@@ -37,7 +37,7 @@ function Reservation() {
   const getUsuario = () => {
     const token = localStorage.getItem("token"); // Obtener el token de localStorage
     axios
-      .get("http://localhost:3001/user", {
+      .get("https://backend-hotel-production-c6a5.up.railway.app/user", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -54,7 +54,7 @@ function Reservation() {
   const postPago = () => {
     console.log("Entro a postPago");
     axios
-      .post("http://localhost:3001/create-checkout-session", {
+      .post("https://backend-hotel-production-c6a5.up.railway.app/create-checkout-session", {
         total_pago: total_pago,
         fecha_llegada: fecha_llegada,
         fecha_salida: fecha_salida,

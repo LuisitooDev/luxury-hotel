@@ -6,7 +6,7 @@ function Login() {
     const [contrasena, setContrasena] = useState("");
 
     const login = () => {
-        axios.post('http://localhost:3001/login', {
+        axios.post('https://backend-hotel-production-c6a5.up.railway.app/login', {
           email: email,
           contrasena: contrasena
         })

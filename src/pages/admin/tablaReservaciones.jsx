@@ -21,7 +21,7 @@ function Tabla_Reservaciones() {
 
   const getReservations = () => {
     axios
-      .get("http://localhost:3001/getReservations")
+      .get("https://backend-hotel-production-c6a5.up.railway.app/getReservations")
       .then((response) => {
         setReservations(response.data);
       })
@@ -32,7 +32,7 @@ function Tabla_Reservaciones() {
 
   const add = () => {
     axios
-      .post("http://localhost:3001/createReservation", {
+      .post("https://backend-hotel-production-c6a5.up.railway.app/createReservation", {
         fecha_llegada: fecha_llegada,
         fecha_salida: fecha_salida,
         total_pago: total_pago,
@@ -48,7 +48,7 @@ function Tabla_Reservaciones() {
 
   const update = () => {
     axios
-      .put(`http://localhost:3001/updateReservation`, {
+      .put(`https://backend-hotel-production-c6a5.up.railway.app/updateReservation`, {
         id_reservacion: id_reservation,
         fecha_llegada: fecha_llegada,
         fecha_salida: fecha_salida,
@@ -68,7 +68,7 @@ function Tabla_Reservaciones() {
 
   const deleteReservation = (idReservacion) => {
     axios
-      .delete(`http://localhost:3001/deleteReservation/${idReservacion}`)
+      .delete(`https://backend-hotel-production-c6a5.up.railway.app/${idReservacion}`)
       .then(() => {
         console.log("Reservacion eliminada con éxito");
         getReservations();
