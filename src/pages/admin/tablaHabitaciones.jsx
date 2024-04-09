@@ -9,7 +9,7 @@ function Tabla_Habitaciones() {
   }, []);
 
   const getRooms = () => {
-    axios.get("https://backend-hotel-production-c6a5.up.railway.app/getRooms")
+    axios.get("https://backend-hotel-dyeg.onrender.com/getRooms")
       .then((response) => {
         setRooms(response.data);
       })

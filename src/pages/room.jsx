@@ -11,7 +11,7 @@ function Rooms() {
 
   const getHabitaciones = () => {
     axios
-      .get("https://backend-hotel-production-c6a5.up.railway.app/getRooms")
+      .get("https://backend-hotel-dyeg.onrender.com/getRooms")
       .then((response) => {
         setHabitaciones(response.data);
       })

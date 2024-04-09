@@ -21,7 +21,7 @@ function Tabla_Reservaciones() {
 
   const getReservations = () => {
     axios
-      .get("https://backend-hotel-production-c6a5.up.railway.app/getReservations")
+      .get("https://backend-hotel-dyeg.onrender.com/getReservations")
       .then((response) => {
         setReservations(response.data);
       })
@@ -32,7 +32,7 @@ function Tabla_Reservaciones() {
 
   const add = () => {
     axios
-      .post("https://backend-hotel-production-c6a5.up.railway.app/createReservation", {
+      .post("https://backend-hotel-dyeg.onrender.com/createReservation", {
         fecha_llegada: fecha_llegada,
         fecha_salida: fecha_salida,
         total_pago: total_pago,
@@ -48,7 +48,7 @@ function Tabla_Reservaciones() {
 
   const update = () => {
     axios
-      .put(`https://backend-hotel-production-c6a5.up.railway.app/updateReservation`, {
+      .put(`https://backend-hotel-dyeg.onrender.com/updateReservation`, {
         id_reservacion: id_reservation,
         fecha_llegada: fecha_llegada,
         fecha_salida: fecha_salida,
@@ -68,7 +68,7 @@ function Tabla_Reservaciones() {
 
   const deleteReservation = (idReservacion) => {
     axios
-      .delete(`https://backend-hotel-production-c6a5.up.railway.app/${idReservacion}`)
+      .delete(`https://backend-hotel-dyeg.onrender.com/${idReservacion}`)
       .then(() => {
         console.log("Reservacion eliminada con éxito");
         getReservations();

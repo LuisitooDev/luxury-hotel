@@ -9,7 +9,7 @@ function Agregar_Reservacion() {
   const [habitacion, setHabitacion] = useState("");
 
   const add = () => {
-    axios.post("https://backend-hotel-production-c6a5.up.railway.app/createReservation", {
+    axios.post("https://backend-hotel-dyeg.onrender.com/createReservation", {
       fecha_llegada: fecha_llegada,
       fecha_salida: fecha_salida,
       total_pago: total_pago,

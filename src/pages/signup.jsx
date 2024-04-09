@@ -9,7 +9,7 @@ function SignUp() {
   const [apellido_m, setApellido_m] = useState("");
     
   const add = () => {
-    axios.post("https://backend-hotel-production-c6a5.up.railway.app/createUser", {
+    axios.post("https://backend-hotel-dyeg.onrender.com/createUser", {
       email: email,
       contrasena: contrasena,
       nombre: nombre,
