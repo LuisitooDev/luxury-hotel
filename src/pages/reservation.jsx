@@ -4,6 +4,7 @@ import axios from "axios";
 import DatePicker from "react-datepicker";
 import { differenceInDays } from "date-fns"; // Importa la función differenceInDays
 import "react-datepicker/dist/react-datepicker.css";
+import Swal from 'sweetalert2';
 
 function Reservation() {
   const [arrivalDate, setArrivalDate] = useState(null);
