@@ -32,11 +32,11 @@ function App() {
           path="/reservation-details/:id"
           element={
             <div>
-              {isStripeLoaded && (
+         
                 <Elements stripe={stripePromise}>
                   <Reservation />
                 </Elements>
-              )}
+            
             </div>
           }
         />

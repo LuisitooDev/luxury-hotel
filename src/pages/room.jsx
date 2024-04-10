@@ -14,6 +14,7 @@ function Rooms() {
       .get("https://backend-hotel-production-c6a5.up.railway.app/getRooms")
       .then((response) => {
         setHabitaciones(response.data);
+        console.log(response.data)
       })
       .catch((error) => {
         console.log("Error: No se pueden obtener las habitaciones", error);
