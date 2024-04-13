@@ -37,7 +37,7 @@ function Rooms() {
           </figure>
           <div className="card-body p-4">
             <h2 className="card-title text-lg font-semibold">{habitacion.tipo_de_habitacion}</h2>
-            <p className="text-sm mb-4">{habitacion.precio}</p>
+            <p className="text-sm mb-4">Price: ${habitacion.precio} per night</p>
             <div className="card-actions flex justify-end">
               <button className="btn bg-customGold" onClick={() => (window.location.href = `/reservation-details/${habitacion.id_habitacion}`)}>Book Now</button>
             </div>

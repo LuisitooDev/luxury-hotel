@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Swal from 'sweetalert2';
 
 function SignUp() {
   const [email, setEmail] = useState("");
@@ -9,28 +10,71 @@ function SignUp() {
   const [apellido_m, setApellido_m] = useState("");
   const [error, setError] = useState("");
 
+
   const add = () => {
     if (!email || !contrasena || !nombre || !apellido_p || !apellido_m) {
-      setError("Todos los campos son requeridos");
-      return;
+        setError("Todos los campos son requeridos");
+        return;
     }
+    //Validacion de correo
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        setError("Por favor ingresa un correo electrónico válido");
+        return;
+    }
+    
+    axios.get(`https://backend-hotel-production-c6a5.up.railway.app/checkEmail?email=${email}`)
+        .then((response) => {
+            if (response.data.exists) {
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Error',
+                  text: `Este correo ya esta asociado con una cuenta.`,
+                  timer: 3000,
+                  timerProgressBar: true,
+                  showConfirmButton: false
+              });
+            } else {
+                axios.post("https://backend-hotel-production-c6a5.up.railway.app/createUser", {
+                    email: email,
+                    contrasena: contrasena,
+                    nombre: nombre,
+                    apellido_p: apellido_p,
+                    apellido_m: apellido_m
+                })
+                    .then(() => {
+                      Swal.fire({
+                        icon: 'success',
+                        title: '¡Bienvenido!',
+                        text: `El usuario ${nombre} fue registrado con éxito.`,
+                        timer: 4000,
+                        timerProgressBar: true,
+                        showConfirmButton: false
+                    });
+                        window.location.href = "/login";
+                    })
+                    .catch((error) => {
+                      Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: `Hubo un error al registrar el usuario.`,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        showConfirmButton: false
+                    });                    });
+            }
+        })
+        .catch((error) => {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error',
+              text: `Hubo un error al registrar el usuario.`,
+              timer: 3000,
+              timerProgressBar: true,
+              showConfirmButton: false
+          });                    });
+};
 
-    axios
-      .post("https://backend-hotel-production-c6a5.up.railway.app/createUser", {
-        email: email,
-        contrasena: contrasena,
-        nombre: nombre,
-        apellido_p: apellido_p,
-        apellido_m: apellido_m
-      })
-      .then(() => {
-        alert(`El empleado ${nombre} fue registrado con éxito.`);
-        window.location.href = "/login";
-      })
-      .catch((error) => {
-        alert("Error" + (error));
-      });
-  };
 
   const handleInputChange = (event, setter) => {
     setter(event.target.value);
@@ -135,7 +179,7 @@ function SignUp() {
           />
 
           <label htmlFor="nombre" className="text-sm font-medium text-gray-700 mb-1 block">
-            Nombre:
+            Name:
           </label>
           <input
             type="text"
@@ -148,7 +192,7 @@ function SignUp() {
           />
 
           <label htmlFor="apellidoPaterno" className="text-sm font-medium text-gray-700 mb-1 block">
-            Apellido Paterno:
+           Last name:
           </label>
           <input
             type="text"
@@ -161,7 +205,7 @@ function SignUp() {
           />
 
           <label htmlFor="apellidoMaterno" className="text-sm font-medium text-gray-700 mb-1 block">
-            Apellido Materno:
+            Last name:
           </label>
           <input
             type="text"
@@ -176,12 +220,14 @@ function SignUp() {
           {error && <div className="text-red-500">{error}</div>}
 
           <div className="text-center">
-            <button
-              className="btn bg-customGold text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
-              onClick={add}
-            >
-              SIGN UP
-            </button>
+          <button
+            type="button"
+            className="btn bg-customGold text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
+            onClick={add}
+          >
+            SIGN UP
+          </button>
+
             <p className="mt-4">
               <a href="/login" className="text-blue-500">
                 I already have an account

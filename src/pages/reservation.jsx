@@ -133,59 +133,67 @@ function Reservation() {
   }, [total_pago]);
 
   return (
-    <>
-      <div className="container mx-auto mt-8 p-4 bg-white shadow-md rounded-md">
-        {habitacion ? (
-          <div className="flex items-center justify-center">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <p className="text-xl font-semibold mb-4">
-                Room: {habitacion.tipo_de_habitacion}
-              </p>
-              <p className="text-base mb-4">
-                User Name:{" "}
-                {usuario && usuario[0]
-                  ? usuario[0].nombre
-                  : "Nombre no disponible"}
-              </p>
-              <p className="text-base mb-4">
-                Price: ${habitacion.precio} per night
-              </p>
-              <div className="mb-4">
-                <p className="text-base">Arrival Date:</p>
-                <DatePicker
-                  className="border p-2"
-                  selected={arrivalDate}
-                  onChange={handleArrivalDateChange}
-                />
-              </div>
-              <div className="mb-4">
-                <p className="text-base">Departure Date:</p>
-                <DatePicker
-                  className="border p-2"
-                  selected={departureDate}
-                  onChange={handleDepartureDateChange}
-                />
-              </div>
-              <p className="text-base mb-4">
-                Number of Nights: {numberOfNights}
-              </p>
-              <p className="text-base mb-4">
-                Total payment: ${(habitacion.precio * numberOfNights) / 100}
-              </p>
-              <button
-                type="button"
-                className="bg-customGold text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
-                onClick={calculateTotalPayment}
-              >
-                Reserve Now
-              </button>
-            </div>
+<>
+  <div className="container mx-auto mt-8 p-4 bg-white shadow-md rounded-md">
+    {habitacion ? (
+      <div className="flex flex-col lg:flex-row items-center justify-center">
+        <div className="w-full lg:w-1/2 bg-white p-6 rounded-lg shadow-md lg:mr-4 mb-4 lg:mb-0">
+          <img src={`/public/${habitacion.imagen}`} alt="Habitacion" className="w-full h-auto mb-4 rounded-md" />
+        </div>
+        <div className="w-full lg:w-1/2 bg-white p-6 rounded-lg shadow-md lg:ml-4">
+          <p className="text-xl font-semibold mb-4">
+            Room: {habitacion.tipo_de_habitacion}
+          </p>
+          <p className="text-base mb-4">
+            User Name:{" "}
+            {usuario && usuario[0]
+              ? usuario[0].nombre
+              : "Nombre no disponible"}
+          </p>
+          <p className="text-base mb-4">
+            Price: ${habitacion.precio} per night
+          </p>
+          <div className="mb-4">
+            <label className="text-sm text-gray-600">Arrival Date:</label>
+            <DatePicker
+              className="border p-2 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              selected={arrivalDate}
+              onChange={handleArrivalDateChange}
+              minDate={new Date()}
+              onKeyDown={(e) => e.preventDefault()}
+            />
           </div>
-        ) : (
-          <p className="text-lg text-gray-700">Cargando habitación...</p>
-        )}
+          <div className="mb-4">
+            <label className="text-sm text-gray-600">Departure Date:</label>
+            <DatePicker
+              className="border p-2 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              selected={departureDate}
+              onChange={handleDepartureDateChange}
+              minDate={arrivalDate || new Date()}
+              onKeyDown={(e) => e.preventDefault()}
+            />
+          </div>
+          <p className="text-base mb-4">
+            Number of Nights: {numberOfNights}
+          </p>
+          <p className="text-base mb-4">
+            Total payment: ${(habitacion.precio * numberOfNights) / 100}
+          </p>
+          <button
+            type="button"
+            className="bg-customGold text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
+            onClick={calculateTotalPayment}
+          >
+            Reserve Now
+          </button>
+        </div>
       </div>
-    </>
+    ) : (
+      <p className="text-lg text-gray-700">Cargando habitación...</p>
+    )}
+  </div>
+</>
+
   );
 }
 
