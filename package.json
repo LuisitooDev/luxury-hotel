@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm install --force && vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -19,11 +19,13 @@
     "@stripe/stripe-js": "^3.0.6",
     "axios": "^1.6.7",
     "date-fns": "^3.3.1",
+    "jwt-decode": "^4.0.0",
     "react": "^18.2.0",
     "react-datepicker": "^6.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.2",
-    "stripe": "^14.19.0"
+    "stripe": "^14.19.0",
+    "sweetalert2": "^11.10.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",

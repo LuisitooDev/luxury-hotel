@@ -4,6 +4,7 @@ import axios from "axios";
 import DatePicker from "react-datepicker";
 import { differenceInDays } from "date-fns"; // Importa la función differenceInDays
 import "react-datepicker/dist/react-datepicker.css";
+import Swal from 'sweetalert2';
 
 function Reservation() {
   const [arrivalDate, setArrivalDate] = useState(null);
@@ -36,6 +37,13 @@ function Reservation() {
 
   const getUsuario = () => {
     const token = localStorage.getItem("token"); // Obtener el token de localStorage
+    if (!token) {
+      Swal.fire({
+        title: "Inicia sesión para reservar",
+        icon: "info",
+      }).then(() => {
+        window.location.href = "/login";
+      });}
     axios
       .get("https://backend-hotel-production-c6a5.up.railway.app/user", {
         headers: {
