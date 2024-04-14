@@ -23,6 +23,13 @@ function SignUp() {
         return;
     }
     
+    // Validacion de contraseña
+    if (contrasena.length < 8 || contrasena === contrasena.toLowerCase()) {
+      setError("La contraseña debe tener al menos 8 caracteres y contener al menos una mayúscula");
+      return;
+    }
+
+
     axios.get(`https://backend-hotel-production-c6a5.up.railway.app/checkEmail?email=${email}`)
         .then((response) => {
             if (response.data.exists) {
@@ -167,6 +174,7 @@ function SignUp() {
 
           <label htmlFor="password" className="text-sm font-medium text-gray-700 mb-1 block">
             Password:
+            <span className="text-gray-500 ml-1">(Must be at least 8 characters and contain at least one uppercase letter)</span>
           </label>
           <input
             type="password"
