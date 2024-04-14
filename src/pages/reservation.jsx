@@ -138,7 +138,7 @@ function Reservation() {
     {habitacion ? (
       <div className="flex flex-col lg:flex-row items-center justify-center">
         <div className="w-full lg:w-1/2 bg-white p-6 rounded-lg shadow-md lg:mr-4 mb-4 lg:mb-0">
-          <img src={`/public/${habitacion.imagen}`} alt="Habitacion" className="w-full h-auto mb-4 rounded-md" />
+          <img src={`${habitacion.imagen}`} alt="Habitacion" className="w-full h-auto mb-4 rounded-md" />
         </div>
         <div className="w-full lg:w-1/2 bg-white p-6 rounded-lg shadow-md lg:ml-4">
           <p className="text-xl font-semibold mb-4">
