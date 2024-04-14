@@ -32,7 +32,6 @@ function App() {
           path="/reservation-details/:id"
           element={
             <div>
-         
                 <Elements stripe={stripePromise}>
                   <Reservation />
                 </Elements>
